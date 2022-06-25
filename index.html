@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+
+
+
+    <title>Document</title>
+    <style>
+        h2 {
+            color: rgb(15, 82, 186);
+            font-size: x-large;
+        }
+        
+        h2 span {
+            color: red;
+        }
+        
+        .zuri {
+            color: black;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        button {
+            background-color: rgb(15, 82, 186);
+            color: white;
+            border: none;
+            padding: 4px 20px;
+            border-radius: 11px;
+            margin-top: 8%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: opacity0.15s;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        button:active {
+            background: transparent;
+            color: rgb(15, 82, 186);
+            border: 2px solid rgb(15, 82, 186);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h2> My calculator <span class="zuri"> + ZURI </span> <span> &#9642</span> </h2>
+
+    <button id="btn" onclick="solveProblem()">Eval</button>
+
+    <script>
+        let msg = 'Hi perform basic calculation';
+        let butt = document.getElementById('#btn');
+
+        function solveProblem() {
+
+            alert(msg);
+            const operator = window.prompt('Enter the Operator');
+            let num1 = parseFloat(window.prompt('Enter first value'))
+            let num2 = parseFloat(window.prompt('Enter 2nd value'))
+            let solution;
+
+
+            if (operator === '+') {
+                solution = num1 + num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else if (operator === '-') {
+                solution = num1 - num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else if (operator === '/') {
+                solution = num1 / num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else if (operator === '*') {
+                solution = num1 * num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else if (operator === '%') {
+                solution = num1 % num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else if (operator === '^') {
+                solution = num1 ^ num2;
+                alert(`${num1} ${operator} ${num2} = ${solution}`)
+            } else {
+                alert('you have entered the wrong operator');
+            }
+        }
+
+
+        butt.addEventListener('click', () => {
+            solveProblem()
+        });
+    </script>
+</body>
+
+</html>

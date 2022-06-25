@@ -1,0 +1,38 @@
+h2 {
+    color: rgb(15, 82, 186);
+    font-size: x-large;
+}
+
+h2 span {
+    color: red;
+}
+
+.zuri {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+    background-color: rgb(15, 82, 186);
+    color: white;
+    border: none;
+    padding: 4px 20px;
+    border-radius: 11px;
+    margin-top: 8%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity0.15s;
+}
+
+button:hover {
+    opacity:
+ 0.9;
+}
+
+button:active {
+    background: transparent;
+    color: rgb(15, 82, 186);
+    border: 2px solid rgb(15, 82, 186);
+    font-weight: bold;
+}
+
